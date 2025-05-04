@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "next-themes";
 import AppContainer from "@/components/layouts/Container";
 import "./globals.css";
+import Footer from "@/components/layouts/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           {children}
         </ThemeProvider>
         </AppContainer>
+        <Footer />
       </div>
     </body>
   </html>

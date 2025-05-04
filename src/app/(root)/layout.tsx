@@ -11,8 +11,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
       <div id={'root-layout'}>
         <HeaderResponsive />
-        <div></div>
-        {children}
+        <div className="mt-[150px]">
+          {children}
+        </div>
       </div>
   )
 }
