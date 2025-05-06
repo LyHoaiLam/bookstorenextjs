@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useToast } from "@/hooks/use-toast"
 import { Moon, Sun } from "lucide-react"
+import { CarouselList } from "@/components/components/carousel/carousel-list/CarouselList"
 
 export default function Home() {
 
@@ -33,6 +34,10 @@ export default function Home() {
             </DropdownMenuContent>
           </DropdownMenu>
             <button onClick={handlerTestToast} className="bg-red p-2">Test Toast</button>
+
+            <p className="text-amber-400">sorry i am currently creating a new website to use this domain, you can find its source code here: https://github.com/LyHoaiLam/bookstorenextjs</p>
+        
+          <CarouselList />
         </div>
     )
 }

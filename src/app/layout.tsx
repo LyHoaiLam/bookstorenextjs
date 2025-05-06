@@ -24,7 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <div className="bg-red">
-        <AppContainer>
+        <AppContainer containerClassName="bg-[#1D3A52]" className="bg-transparent">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Toaster />
           {children}
