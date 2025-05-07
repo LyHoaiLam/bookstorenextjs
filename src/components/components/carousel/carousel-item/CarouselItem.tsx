@@ -20,17 +20,12 @@ interface Props {
 
 export default function CarouselIemBook({ title, description, author, image, price }: Props) {
     return (
-        <div className="p-5 border border-amber-400 rounded-2xl cursor-pointer">
+        <div className="p-5 border border-amber-400 rounded-2xl overflow-hidden cursor-pointer">
             <AlertDialog>
                 <AlertDialogTrigger asChild>
                     <div>
-                        <Image
-                            src={image}
-                            alt="Not Found"
-                            width={1000}
-                            height={1000}
-                            quality={100}
-                            className="w-full h-full object-contain rounded-2xl"
+                        <Image src={image} alt="Not Found" width={1000} height={1000} quality={100}
+                            className="w-full h-full object-cover rounded-2xl"
                         />
                         <div className="mt-12">
                             <h4
@@ -46,7 +41,7 @@ export default function CarouselIemBook({ title, description, author, image, pri
                 <AlertDialogContent>
                     <AlertDialogHeader>
                     <AlertDialogTitle>{title}</AlertDialogTitle>
-                    <AlertDialogDescription className="text-[#fff]">
+                    <AlertDialogDescription className="text-black dark:text-white ">
                         {price} VNĐ
                     </AlertDialogDescription>
                     </AlertDialogHeader>

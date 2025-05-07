@@ -1,6 +1,5 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
-
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi, } from "@/components/ui/carousel"
 import { data } from "../carousel-item/data"
 import CarouselIemBook from "../carousel-item/CarouselItem"
@@ -26,16 +25,14 @@ export function CarouselList() {
 
   return (
     <div>
-      <Carousel
-          className="w-full"
+      <Carousel className="w-full"
           setApi={setApi}
           opts={{ align: "start", loop: true }}
           plugins={[
-              Autoplay({
-                delay: 4000,
-              }),
-            ]}
-      
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
       >
         <CarouselContent>
         {data.map((item, index) => (

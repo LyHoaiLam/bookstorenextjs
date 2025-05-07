@@ -5,18 +5,16 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
     username: z
       .string()
       .nonempty({ message: "Username không được bỏ trống." })
-    //   .min(2, { message: "Username phải có ít nhất 2 ký tự." })
     ,
     password: z
       .string()
       .nonempty({ message: "Password không được bỏ trống." })
-    //   .min(6, { message: "Password phải có ít nhất 6 ký tự." })
-      ,
   })
   
 export default function LoginForm() {
@@ -27,6 +25,13 @@ export default function LoginForm() {
       password: "",
     },
   })
+  const { toast } = useToast()
+    function handlerTestToast() {
+        toast({
+            title: "Thông báo",
+            description: "Tính năng vẫn đang phát triển"
+        })
+    }
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
     console.log("Submit data: ", data)
@@ -45,7 +50,6 @@ export default function LoginForm() {
                             <FormControl>
                                 <Input placeholder="username" {...field} />
                             </FormControl>
-                            {/* <FormDescription>This is your public display name.</FormDescription> */}
                             <FormMessage />
                             </FormItem>
                         )}
@@ -58,13 +62,12 @@ export default function LoginForm() {
                             <FormControl>
                                 <Input type="password" placeholder="password" {...field} />
                             </FormControl>
-                            {/* <FormDescription>Enter your password.</FormDescription> */}
                             <FormMessage />
                             </FormItem>
                         )}
                     />
 
-                    <Button type="submit">Submit</Button>
+                    <Button onClick={handlerTestToast} type="submit">Submit</Button>
                 </form>
             </Form>
         </div>
