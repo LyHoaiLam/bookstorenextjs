@@ -2,13 +2,13 @@
 import { useEffect, useRef } from 'react';
 import { useGlobalContext } from '@/context/global/GlobalContext';
 
-const HeaderWrapper = ({ children, className }: ComponentProps) => {
-	const containerRef = useRef<HTMLDivElement>(null);
-	const { handleSafeAreaInset } = useGlobalContext();
+export default function HeaderWrapper({ children, className }: ComponentProps) {
+
+	const containerRef = useRef<HTMLDivElement>(null)
+	const { handleSafeAreaInset } = useGlobalContext()
 
 	useEffect(() => {
 		if (!containerRef.current) return;
-
 		const resizeObserver = new ResizeObserver((entries) => {
 			for (const entry of entries) {
 				handleSafeAreaInset(entry.target.getBoundingClientRect())
@@ -16,7 +16,6 @@ const HeaderWrapper = ({ children, className }: ComponentProps) => {
 		});
 
 		resizeObserver.observe(containerRef.current)
-
 		return () => {
 			resizeObserver.disconnect()
 		}
@@ -30,5 +29,3 @@ const HeaderWrapper = ({ children, className }: ComponentProps) => {
 		)
 	)
 }
-
-export default HeaderWrapper

@@ -28,8 +28,7 @@ export default function CarouselIemBook({ title, description, author, image, pri
                             className="w-full h-full object-cover rounded-2xl"
                         />
                         <div className="mt-12">
-                            <h4
-                                className="text-white text-2xl leading-6 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                            <h4 className="text-white text-2xl leading-6 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                                 {author}
                             </h4>
                             <p className="mt-6 text-white text-base leading-6">{description}</p>
