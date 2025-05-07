@@ -47,7 +47,7 @@ export default function RegisterForm() {
   return (
     <div className="flex items-center justify-center">
         <div className="w-[600px] flex flex-col gap-20 p-8 rounded-lg">
-            <h1 className="text-4xl w-full flex items-center justify-center">Login</h1>
+            <h1 className="text-4xl w-full flex items-center justify-center">Register</h1>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     <FormField name="username" control={form.control}

@@ -21,7 +21,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <div className="bg-red">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Toaster />
-          {children}
+          <div className="mt-45">
+            {children}
+          </div>
         </ThemeProvider>
         <Footer />
       </div>
