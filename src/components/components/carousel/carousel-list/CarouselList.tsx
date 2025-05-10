@@ -16,7 +16,6 @@ export function CarouselList() {
     }
     setCount(api.scrollSnapList().length)
     setCurrent(api.selectedScrollSnap() + 1)
- 
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1)
     })
