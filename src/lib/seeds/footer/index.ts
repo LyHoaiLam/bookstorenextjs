@@ -2,7 +2,7 @@
 export const FooterSeed = [
 	{
 		title: 'Home',
-		href: '/',
+		href: '/home',
 	},
 	{
 		title: 'Travel news',

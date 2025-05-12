@@ -10,18 +10,18 @@ import { useToast } from "@/hooks/use-toast"
 const formSchema = z.object({
     username: z
       .string()
-      .nonempty({ message: "Username không được bỏ trống." })
-      .min(6, { message: "Username phải có ít nhất 6 ký tự." })
+      .nonempty({ message: "Username không được bỏ trống."})
+      .min(6, { message: "Username phải có ít nhất 6 ký tự."})
     ,
     password: z
       .string()
-      .nonempty({ message: "Password không được bỏ trống." })
-      .min(10, { message: "Username phải có ít nhất 10 ký tự." })
+      .nonempty({ message: "Password không được bỏ trống."})
+      .min(10, { message: "Username phải có ít nhất 10 ký tự."})
     ,
     confirmPassword: z
       .string()
-      .nonempty({ message: "Password không được bỏ trống." })
-      .min(10, { message: "Username phải có ít nhất 10 ký tự." })
+      .nonempty({ message: "Password không được bỏ trống."})
+      .min(10, { message: "Username phải có ít nhất 10 ký tự."})
   })
   
 export default function RegisterForm() {
@@ -52,37 +52,37 @@ export default function RegisterForm() {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     <FormField name="username" control={form.control}
                         render={({ field }) => (
-                            <FormItem>
-                            <FormLabel>Username</FormLabel>
-                            <FormControl>
-                                <Input placeholder="username" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
+                          <FormItem>
+                          <FormLabel>Username</FormLabel>
+                          <FormControl>
+                              <Input placeholder="username" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                          </FormItem>
                         )}
                     />
 
                     <FormField name="password" control={form.control}
                         render={({ field }) => (
-                            <FormItem>
-                            <FormLabel>Password</FormLabel>
-                            <FormControl>
-                                <Input type="password" placeholder="password" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
+                          <FormItem>
+                          <FormLabel>Password</FormLabel>
+                          <FormControl>
+                              <Input type="password" placeholder="password" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                          </FormItem>
                         )}
                     />
 
                     <FormField name="confirmPassword" control={form.control}
                         render={({ field }) => (
-                            <FormItem>
-                            <FormLabel>Password</FormLabel>
-                            <FormControl>
-                                <Input type="password" placeholder="confirm Password" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
+                          <FormItem>
+                          <FormLabel>Password</FormLabel>
+                          <FormControl>
+                              <Input type="password" placeholder="confirm Password" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                          </FormItem>
                         )}
                     />
 

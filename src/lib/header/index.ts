@@ -1,7 +1,7 @@
 export const HeaderSeed = [
 	{
 		title: 'Home',
-		href: '/',
+		href: '/home',
 		options: [],
 	},
 	{

@@ -10,7 +10,7 @@ export default function Layout({ children } : { children: React.ReactNode }) {
   return (
       <div>
         <HeaderResponsive />
-        <div className="z-2">
+        <div className="z-15">
           {children}
         </div>
       </div>

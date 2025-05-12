@@ -12,7 +12,7 @@ export default async function HeaderResponsive() {
 	const GlobalHeader = mobileCheck ? HeaderMobile : HeaderDesktop
 
 	return (
-        <header className="bg-white shadow-xl/30 z-1 fixed left-0 top-0 w-full dark:border-neutral-200">
+        <header className="bg-white shadow-xl/30 z-20 fixed left-0 top-0 w-full dark:border-neutral-200">
             <HeaderWrapper>
                 <AppContainer>
                     <div className="flex sm:flex-col">

@@ -62,9 +62,6 @@ export default function CarouselIemBook({
           <AlertDialogHeader>
             <AlertDialogTitle>{title}</AlertDialogTitle>
             <AlertDialogDescription className="text-black dark:text-white">
-                
-              
-              
               {price} VNĐ
             </AlertDialogDescription>
           </AlertDialogHeader>
