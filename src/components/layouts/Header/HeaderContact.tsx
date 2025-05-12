@@ -1,13 +1,12 @@
 'use client'
+import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { ContactHeaderSeed } from '@/lib/header';
 import IconPhone from '@/assets/icons/IconPhone';
 import IconEmail from '@/assets/icons/IconEmail';
 import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
 import { Switch } from "@/components/ui/switch"
-import Image from 'next/image';
-
+import IconLogo from '@/assets/icons/logo/IconLogo';
 
 export default function HeaderContact({ mobile } : { mobile: boolean }) {
 
@@ -25,11 +24,9 @@ export default function HeaderContact({ mobile } : { mobile: boolean }) {
 		<div className={'py-8 flex h-4 w-full items-center justify-between'}>
 			<div className={'flex h-full items-center gap-6 py-2'}>
 				<div className={'flex h-full items-center gap-1 text-sm leading-[22px] text-neutrals-2'}>
-					<Image src={'/images/logo/LogoBookWebsiteNextJS.png'} width={900} height={900} quality={100} alt='not found'
-						className='w-[100px] h-[25px] object-contain'
-					/>
-					<span className='animate-gradient-text'>
-						Chào mừng bạn đến với Website sánh của chúng tôi
+					<IconLogo />
+					<span className='ml-6 hidden sm:block animate-gradient-text text-lg'>
+						Chào mừng bạn đến với Website du lịch của LHL
 					</span>
 				</div>
 
@@ -57,11 +54,11 @@ export default function HeaderContact({ mobile } : { mobile: boolean }) {
 
 			</div>
 			<div className='items-center'>
-			<div className="hidden sm:block items-center space-x-2">
-				<Switch id="theme-switch" checked={currentTheme === 'dark'}
-					onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-				/>
-			</div>
+				<div className="hidden sm:block items-center space-x-2">
+					<Switch id="theme-switch" checked={currentTheme === 'dark'}
+						onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+					/>
+				</div>
 
 			</div>
 		</div>

@@ -1,16 +1,30 @@
-import * as React from "react"
+'use client'
+import {useState, useEffect} from "react"
 import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi, } from "@/components/ui/carousel"
-import { data } from "../carousel-item/data"
+import { cn } from '@/lib/utils';
 import CarouselIemBook from "../carousel-item/CarouselItem"
 
-export function CarouselList() {
+interface Props {
+  className?: string;
+  title: string;
+  data: ItemData[];
+}
 
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
+interface ItemData {
+  title: string;
+  description: string;
+  image: string;
+  price: number;
+}
+
+export function CarouselList({title, data, className } : Props) {
+
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
  
-  React.useEffect(() => {
+  useEffect(() => {
     if (!api) {
       return
     }
@@ -23,8 +37,11 @@ export function CarouselList() {
 
 
   return (
-    <div>
-      <Carousel className="w-full"
+    <div className={cn("", className)}>
+        <div className="neon-container">
+          <h1 className="text-white neon-text text-2xl">{title}</h1>
+        </div>
+      <Carousel className="w-full mt-5"
           setApi={setApi}
           opts={{ align: "start", loop: true }}
           plugins={[
@@ -35,10 +52,9 @@ export function CarouselList() {
       >
         <CarouselContent>
         {data.map((item, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <CarouselIemBook
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 hover-item">
+              <CarouselIemBook className="z-1"
                 title={item.title}
-                author={item.author}
                 description={item.description}
                 image={item.image}
                 price={item.price}

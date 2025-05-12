@@ -5,11 +5,11 @@ export const FooterSeed = [
 		href: '/',
 	},
 	{
-		title: 'Book news',
-		href: '/booknews',
+		title: 'Travel news',
+		href: '/travelnews',
 	},
 	{
-		title: 'About LHL',
+		title: 'About Travel LHL',
 		href: '/about',
 	},
 ]
@@ -24,7 +24,7 @@ export const FooterDefault = [
 		href: '/',
 	},
 	{
-		title: 'Chính sánh vận chuyển',
+		title: 'Chính sánh bảo mật',
 		href: '/',
 	}
 ]

@@ -1,7 +1,5 @@
 export default function Page() {
     return (
-        <div className="">
-            Tính năng đang trong giai đoạn phát triển
-        </div>
+        <div>About Travel LHL Tính năng đang trong giai đoạn phát triển</div>
     )
 }

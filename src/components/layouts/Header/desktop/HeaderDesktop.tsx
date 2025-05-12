@@ -1,28 +1,22 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import AppContainer from '@/components/layouts/Container';
 import { headerData } from '@/lib/seeds/header';
+import IconLogo from '@/assets/icons/logo/IconLogo';
+import IconClock from '@/assets/icons/logo/IconClock';
+import CountDown from '@/components/components/CountDown';
 
-export default function HeaderDesktop() {
+export default function HeaderDesktop({ mobile } : { mobile: boolean }) {
 
 	return (
-		<AppContainer containerClassName={'border-t border-blue-100 py-6'} className={'flex h-10 items-center'}>
+		<AppContainer containerClassName={'border-t border-blue-100 py-6'} className={'flex h-10 items-center gap-4'}>
 			<div className={'flex h-full flex-1 justify-between gap-8 sm:justify-normal sm:gap-10'}>
 				<Link href={'/home'} className={'flex items-center gap-2'}>
-                    <Image src={'/images/logo/book-logo-design-free-vector.jpg'} alt={'190Evisa logo'}
-                        className="w-8 h-8" width={500} height={500}
-                    />
-                    <h1 className="text-lg font-semibold leading-none text-black">Book LHL</h1>
+                    <IconLogo />
                  </Link>
 
 				<Separator orientation="vertical" className="hidden bg-blue-100 sm:block" />
-
-				<div className={'flex w-full items-center justify-end gap-2 sm:hidden'}>
-					<Image src="/images/avatar/user-avatar.png" alt="User avatar" width={32} height={32} />
-					
-				</div>
 
 				<div className={'flex gap-10 text-black cursor-pointer items-center'}>
 					{headerData.map((item, index) => (
@@ -31,6 +25,13 @@ export default function HeaderDesktop() {
 						</Link>
                     ))}
 				</div>
+			</div>
+
+			<div className={'hidden h-full items-center gap-1 text-sm leading-6 sm:flex'}>
+				<IconClock width={20} height={20} />
+				{!mobile && (
+					<CountDown className={'text-sm leading-6'} />
+				)}
 			</div>
 
 			<div className={'hidden h-full items-center gap-6 sm:flex'}>
@@ -47,9 +48,7 @@ export default function HeaderDesktop() {
 					}>
 					Login
 				</Link>
-				<Image src={'/images/avatar/user-avatar.png'} alt={'User avatar'} width={32} height={32}
-					className={'flex lg:hidden'}
-				/>
+
 			</div>
 		</AppContainer>
 	)

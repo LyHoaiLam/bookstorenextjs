@@ -5,8 +5,8 @@ export const headerData = [
 		options: [],
 	},
 	{
-		title: 'Book news',
-		href: '/booknews',
+		title: 'Travel news',
+		href: '/travelnews',
 	},
 	{
 		title: 'About Book LHL',

@@ -13,13 +13,13 @@ export default function HeaderWrapper({ children, className }: ComponentProps) {
 			for (const entry of entries) {
 				handleSafeAreaInset(entry.target.getBoundingClientRect())
 			}
-		});
+		})
 
 		resizeObserver.observe(containerRef.current)
 		return () => {
 			resizeObserver.disconnect()
 		}
-	}, [])
+	}, [handleSafeAreaInset])
 
 	return (
 		children && (

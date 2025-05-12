@@ -7,7 +7,6 @@ import { Progress } from '@/components/ui/progress';
 import { GlobalUI } from '@/themes/type';
 // import { styledConsoleLog } from '../../utils/log/logger'
 
-
 const DOMRectInit: ViewportBoundary = { x: 0, y: 0, width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0 }
 
 const GlobalContext = createContext<GlobalStates & GlobalActions>({
@@ -23,14 +22,13 @@ const GlobalProvider = ({
 	children: ReactNode;
 	init: { mobileCheck: boolean };
 }) => {
-	const [viewportBoundary, setViewportBoundary] =
-		useState<ViewportBoundary>(DOMRectInit);
-	const firstRenderRef = useRef(false);
-	const { loading } = useGlobalStore();
+	const [viewportBoundary, setViewportBoundary] = useState<ViewportBoundary>(DOMRectInit)
+	const firstRenderRef = useRef(false)
+	const { loading } = useGlobalStore()
 
 	const handleSafeAreaInset = (value: ViewportBoundary) => {
 		setViewportBoundary(value);
-	};
+	}
 
 	useEffect(() => {
 		if (!firstRenderRef.current) {
@@ -57,7 +55,7 @@ const GlobalProvider = ({
 			showWarning();
 			firstRenderRef.current = true;
 		}
-	}, [firstRenderRef.current]);
+	}, []);
 
 	return (
 		<GlobalContext.Provider
@@ -67,23 +65,22 @@ const GlobalProvider = ({
 				handleSafeAreaInset,
 			}}>
 			{loading && (
-				<div
-					style={{ zIndex: GlobalUI.zIndex.loadingOverlay }}
+				<div style={{ zIndex: GlobalUI.zIndex.loadingOverlay }}
 					className={`bg-other-overlay fixed left-0 top-0 flex h-screen w-screen items-center justify-center`}>
 					<Progress />
 				</div>
 			)}
 			{children}
 		</GlobalContext.Provider>
-	);
-};
+	)
+}
 
 const useGlobalContext = () => {
 	const context = useContext(GlobalContext);
 	if (context === undefined) {
-		throw new Error('useViewport must be used within a GlobalProvider');
+		throw new Error('useViewport must be used within a GlobalProvider')
 	}
 	return context;
-};
+}
 
-export { GlobalProvider, useGlobalContext };
+export { GlobalProvider, useGlobalContext }
