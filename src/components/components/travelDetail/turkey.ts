@@ -1,5 +1,4 @@
-
-export const dataJapanDetail = {
+export const dataTurkyDetail = {
         title: 'Nhật Bản, xứ sở hoa anh đào, vẫn luôn là nơi thu hút rất nhiều khách du lịch trên thế giới. Đến Nhật Bản, bạn có thể ghé thăm những thành phố hiện đại, sầm uất như Tokyo, Yokohama hay tham quan những vùng đất đậm nét truyền thống, cổ kính như Kyoto, Nagoya; hoặc đắm mình giữa cảnh sắc thiên nhiên xinh đẹp của núi Phú Sĩ và các suối nước nóng ở Noboribetsu…',
         title1: 'Ngày 1: Hồ Chí Minh - Narita (Tokyo)',
                 des1: [
@@ -45,14 +44,16 @@ export const dataJapanDetail = {
         ]
 }
 
-export  const imagesJapan = [
-     { image: '/images/products/Japan/Japan1.png' },
-     { image: '/images/products/Japan/Japan2.png' },
-     { image: '/images/products/Japan/Japan3.png' },
-     { image: '/images/products/Japan/Japan4.png' },
-     { image: '/images/products/Japan/Japan5.png' },
-     { image: '/images/products/Japan/Japan6.png' },
-     { image: '/images/products/Japan/Japan7.png' },    
+export  const imagesTurky = [
+     { image: '/images/products/Turkey/ThoNhiKy1.jpg' },
+     { image: '/images/products/Turkey/ThoNhiKy2.jpg' },
+     { image: '/images/products/Turkey/ThoNhiKy3.jpg' },
+     { image: '/images/products/Turkey/ThoNhiKy4.jpg' },
+     { image: '/images/products/Turkey/ThoNhiKy5.jpg' },
+     { image: '/images/products/Turkey/ThoNhiKy6.jpg' },
+     { image: '/images/products/Turkey/ThoNhiKy7.jpg' },    
+     { image: '/images/products/Turkey/ThoNhiKy8.jpg' },    
+     { image: '/images/products/Turkey/ThoNhiKy9.jpg' },    
   ]
 
 
