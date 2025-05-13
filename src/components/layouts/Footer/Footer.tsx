@@ -18,9 +18,7 @@ export default function Footer() {
 				<div className={'flex w-full justify-between pb-6 md:w-auto md:gap-5 md:pb-0 lg:gap-10 xl:gap-20'}>
 					<div className={'flex flex-col gap-5 md:py-20'}>
 					{FooterSeed.map((item, index) => (
-						<Link key={index}
-							href={item.href}
-							className={'min-w-[160px]'}>
+						<Link key={index} href={item.href} className={'min-w-[160px]'}>
 							<p className={'text-neutrals-4'}>
 								{item.title}
 							</p>
@@ -30,9 +28,7 @@ export default function Footer() {
 		
 					<div className={'flex flex-col gap-5 md:py-20'}>
 						{FooterDefault.map((item, index) => (
-							<Link key={index}
-								href={item.href}
-								className={'min-w-[160px]'}>
+							<Link key={index} href={item.href} className={'min-w-[160px]'}>
 								<p className={'text-neutrals-4'}>
 									{item.title}
 								</p>
@@ -50,7 +46,6 @@ export default function Footer() {
 						</p>
 						<div className={'border-divider flex items-center rounded-full border-2 p-2 pl-4'}>
 							<input placeholder={'Enter your email'} className={'reset-input flex-1 leading-6 text-neutrals-2 placeholder:text-neutrals-4'} />
-							
 						</div>
 					</div>
 				</div>

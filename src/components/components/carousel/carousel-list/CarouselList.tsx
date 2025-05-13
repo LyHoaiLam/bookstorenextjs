@@ -52,11 +52,10 @@ export function CarouselList({ title, data, className, timeAnimation = 2000, dir
       <div className="neon-container">
         <h1 className="text-white neon-text text-2xl">{title}</h1>
       </div>
-      <Carousel
-        className="w-full mt-5"
-        setApi={setApi}
+      <Carousel className="w-full mt-5"
         opts={{ align: "start", loop: true }}
-      >
+        setApi={setApi}
+        >
         <CarouselContent>
           {data.map((item, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 hover-item">

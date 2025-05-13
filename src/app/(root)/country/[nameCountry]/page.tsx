@@ -24,7 +24,7 @@ export default function CountryPage() {
     if (countryInfo?.images?.[0]?.image) {
       setSelectedImage(countryInfo.images[0].image);
     }
-  }, [decodedName]);
+  }, [decodedName, countryInfo.images]);
 
   if (!countryInfo) {
     return <div className="text-center mt-10 text-red-500 text-xl">Không tìm thấy dữ liệu cho quốc gia: {decodedName}</div>;
@@ -62,7 +62,7 @@ export default function CountryPage() {
       <h1 className="text-2xl font-bold">Quốc gia: {decodedName}</h1>
       <div>Page chi tiết về chuyến khám phá <span className="text-2xl">{decodedName.toUpperCase()}!</span></div>
       <div>
-        <h1>{countryInfo.title}</h1>
+        <h1>{data.title}</h1>
         <div className="flex justify-between flex-wrap">
           <div className="mt-6 flex sm:items-center gap-6 flex-col sm:flex-row">
             <p>{date}</p>

@@ -1,17 +1,6 @@
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-
 interface Props {
   className?: string;
   title: string;
@@ -20,29 +9,13 @@ interface Props {
   price: number;
 }
 
-export default function CarouselIemBook({
-  title,
-  description,
-  image,
-  price,
-  className,
-}: Props) {
+export default function CarouselIemBook({ title, description, image, price, className }: Props) {
   return (
-    <div
-      className={cn(
-        "bg-white p-4 border border-amber-400 rounded-2xl overflow-hidden cursor-pointer",
-        className
-      )}
-    >
+    <div className={cn("bg-white p-4 border border-amber-400 rounded-2xl overflow-hidden cursor-pointer", className )}>
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <div>
-            <Image
-              src={image}
-              alt="Not Found"
-              width={1000}
-              height={1000}
-              quality={100}
+            <Image src={image} width={1000} height={1000} quality={100} alt="Not Found"
               className="w-full max-w-[400px] h-full min-h-[180px] max-h-[180px] object-cover rounded-2xl"
             />
             <div className="mt-5">
