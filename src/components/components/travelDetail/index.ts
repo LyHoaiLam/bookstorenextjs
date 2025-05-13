@@ -2,7 +2,7 @@ import { dataAmericanDetail, imagesAmerican } from "./american";
 import { dataJapanDetail, imagesJapan } from "./japan";
 import { dataTurkyDetail, imagesTurky } from "./turkey";
 
-export const countryDataMap: Record<string, { data: any; images: { image: string }[] }> = {
+export const countryDataMap: Record<string, { data: unknown; images: { image: string }[] }> = {
   "Nhật Bản": {
     data: dataJapanDetail,
     images: imagesJapan,
