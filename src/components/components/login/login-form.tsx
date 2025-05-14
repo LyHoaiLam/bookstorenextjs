@@ -10,6 +10,10 @@ import { formLogin } from "@/validation/validationLogin"
 import { z } from "zod"
   
 export default function LoginForm() {
+  
+  const { setUsername, setPassword } = useAuthStore()
+  const { toast } = useToast()
+
   const form = useForm<z.infer<typeof formLogin>>({
     resolver: zodResolver(formLogin),
     defaultValues: {
@@ -18,15 +22,7 @@ export default function LoginForm() {
     },
   })
   
-  const { toast } = useToast()
-  const { setUsername, setPassword } = useAuthStore()
 
-  function handlerTestToast() {
-    toast({
-        title: "Thông báo",
-        description: "Tính năng vẫn đang phát triển"
-    })
-  }
 
   const onSubmit = (data: z.infer<typeof formLogin>) => {
     console.log("Submit data: ", data)
@@ -69,7 +65,7 @@ export default function LoginForm() {
                         )}
                     />
 
-                    <Button onClick={handlerTestToast} type="submit">Submit</Button>
+                    <Button type="submit">Submit</Button>
                 </form>
             </Form>
         </div>

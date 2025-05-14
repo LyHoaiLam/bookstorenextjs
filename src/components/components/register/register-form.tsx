@@ -9,6 +9,9 @@ import { useToast } from "@/hooks/use-toast"
 import { formRegister } from "@/validation/validationRegister"
 
 export default function RegisterForm() {
+  
+  const { toast } = useToast()
+
   const form = useForm<z.infer<typeof formRegister>>({
     resolver: zodResolver(formRegister),
     defaultValues: {
@@ -17,16 +20,13 @@ export default function RegisterForm() {
       confirmPassword: ""
     },
   })
-  const { toast } = useToast()
-    function handlerTestToast() {
-        toast({
-            title: "Thông báo",
-            description: "Tính năng vẫn đang phát triển"
-        })
-    }
 
   const onSubmit = (data: z.infer<typeof formRegister>) => {
     console.log("Submit data: ", data)
+    toast({
+      title: "Thông tin đăng nhập",
+      description: `Username: ${data.username} - Password: ${data.password} - ConfirmPassword: ${data.password}`,
+    })
   }
 
   return (
@@ -71,7 +71,7 @@ export default function RegisterForm() {
                         )}
                     />
 
-                    <Button onClick={handlerTestToast} type="submit">Submit</Button>
+                    <Button type="submit">Submit</Button>
                 </form>
             </Form>
         </div>
