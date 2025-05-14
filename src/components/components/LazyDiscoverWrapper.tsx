@@ -11,7 +11,10 @@ interface LazyDiscoverWrapperProps {
 
 const Discover = dynamic(() => import("@/components/components/tabChooice/Discovers"), {
   ssr: false,
-  loading: () => <p className="text-center text-black">Đang tải...</p>,
+  loading: () => <div className="flex justify-center items-center h-[200px]">
+  <span className="loader"></span>
+</div>
+,
 });
 
 export default function LazyDiscoverWrapper({ title, autoRotate = false, className }: LazyDiscoverWrapperProps) {
@@ -29,7 +32,7 @@ export default function LazyDiscoverWrapper({ title, autoRotate = false, classNa
           <Discover title={title} autoRotate={autoRotate} className={className} />
         </>
       ) : (
-        <p className="text-center text-white">Loading content...</p>
+        <span className="loader"></span>
       )}
     </div>
   );
