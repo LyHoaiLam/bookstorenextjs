@@ -6,30 +6,15 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/hooks/use-toast"
+import { formRegister } from "@/validation/validationRegister"
 
-const formSchema = z.object({
-    username: z
-      .string()
-      .nonempty({ message: "Username không được bỏ trống."})
-      .min(6, { message: "Username phải có ít nhất 6 ký tự."})
-    ,
-    password: z
-      .string()
-      .nonempty({ message: "Password không được bỏ trống."})
-      .min(10, { message: "Username phải có ít nhất 10 ký tự."})
-    ,
-    confirmPassword: z
-      .string()
-      .nonempty({ message: "Password không được bỏ trống."})
-      .min(10, { message: "Username phải có ít nhất 10 ký tự."})
-  })
-  
 export default function RegisterForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof formRegister>>({
+    resolver: zodResolver(formRegister),
     defaultValues: {
       username: "",
       password: "",
+      confirmPassword: ""
     },
   })
   const { toast } = useToast()
@@ -40,7 +25,7 @@ export default function RegisterForm() {
         })
     }
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+  const onSubmit = (data: z.infer<typeof formRegister>) => {
     console.log("Submit data: ", data)
   }
 
@@ -79,7 +64,7 @@ export default function RegisterForm() {
                           <FormItem>
                           <FormLabel>Password</FormLabel>
                           <FormControl>
-                              <Input type="password" placeholder="confirm Password" {...field} />
+                              <Input type="confirmPassword" placeholder="confirm Password" {...field} />
                           </FormControl>
                           <FormMessage />
                           </FormItem>

@@ -1,40 +1,42 @@
 "use client"
-import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/hooks/use-toast"
-
-const formSchema = z.object({
-    username: z
-      .string()
-      .nonempty({ message: "Username không được bỏ trống." })
-    ,
-    password: z
-      .string()
-      .nonempty({ message: "Password không được bỏ trống." })
-  })
+import { useAuthStore } from "@/store/useAuthStore"
+import { formLogin } from "@/validation/validationLogin"
+import { z } from "zod"
   
 export default function LoginForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof formLogin>>({
+    resolver: zodResolver(formLogin),
     defaultValues: {
       username: "",
       password: "",
     },
   })
+  
   const { toast } = useToast()
-    function handlerTestToast() {
-        toast({
-            title: "Thông báo",
-            description: "Tính năng vẫn đang phát triển"
-        })
-    }
+  const { setUsername, setPassword } = useAuthStore()
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+  function handlerTestToast() {
+    toast({
+        title: "Thông báo",
+        description: "Tính năng vẫn đang phát triển"
+    })
+  }
+
+  const onSubmit = (data: z.infer<typeof formLogin>) => {
     console.log("Submit data: ", data)
+    setUsername(data.username)
+    setPassword(data.password)
+
+    toast({
+      title: "Thông tin đăng nhập",
+      description: `Username: ${data.username} - Password: ${data.password}`,
+    })
   }
 
   return (
@@ -45,25 +47,25 @@ export default function LoginForm() {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     <FormField name="username" control={form.control}
                         render={({ field }) => (
-                            <FormItem>
-                            <FormLabel>Username</FormLabel>
-                            <FormControl>
-                                <Input placeholder="username" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
+                          <FormItem>
+                          <FormLabel>Username</FormLabel>
+                          <FormControl>
+                              <Input placeholder="username" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                          </FormItem>
                         )}
                     />
 
                     <FormField name="password" control={form.control}
                         render={({ field }) => (
-                            <FormItem>
-                            <FormLabel>Password</FormLabel>
-                            <FormControl>
-                                <Input type="password" placeholder="password" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
+                          <FormItem>
+                          <FormLabel>Password</FormLabel>
+                          <FormControl>
+                              <Input type="password" placeholder="password" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                          </FormItem>
                         )}
                     />
 
