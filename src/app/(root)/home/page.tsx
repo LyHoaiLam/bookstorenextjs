@@ -3,7 +3,8 @@ import { dataNgoaiNuoc, dataTrongNuoc } from "@/components/components/carousel/c
 import { CarouselList } from "@/components/components/carousel/carousel-list/CarouselList";
 import AppContainer from "@/components/layouts/Container";
 import Link from "next/link";
-import LazyDiscoverWrapper from "@/components/components/LazyDiscoverWrapper"; // ← Chứa logic cuộn/lazy-load
+import LazyComponentWrapper from "@/components/components/LazyDiscoverWrapper";
+import Discover from "@/components/components/tabChooice/Discovers";
 
 export default function Home() {
   return (
@@ -15,7 +16,11 @@ export default function Home() {
         </div>
         <CarouselList title="Du lịch nội địa" data={dataTrongNuoc} />
         <CarouselList title="Du lịch quốc tế" data={dataNgoaiNuoc} direction="backward" timeAnimation={4000} />
-        <LazyDiscoverWrapper title="Khám phá thêm" autoRotate={true} className="mt-10" />
+        <LazyComponentWrapper
+          Component={Discover} 
+          componentProps={{ title: "Khám phá thêm", autoRotate: true }} 
+          className="mt-10"
+        />
 
       </AppContainer>
     </div>

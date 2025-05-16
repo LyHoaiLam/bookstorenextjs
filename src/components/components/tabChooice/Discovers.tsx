@@ -48,7 +48,7 @@ export default function Discover({ title, className, autoRotate = false }: Props
               query: { img: data[0].src },
             }}
           >
-            <Image width={1000} height={1000} quality={100} src={data[0].src} alt={data[0].label}
+            <Image width={500} height={500} quality={100} src={data[0].src} alt={data[0].label}
               className="w-full h-full object-cover rounded-2xl transition duration-500 group-hover:blur-xs"
             />
             <div className="absolute inset-0 flex items-end p-2 z-10">
@@ -66,7 +66,7 @@ export default function Discover({ title, className, autoRotate = false }: Props
                 query: { img: img.src },
               }}
             >
-              <Image width={1000} height={1000} quality={100} src={img.src} alt={img.label}
+              <Image width={500} height={500} quality={100} src={img.src} alt={img.label}
                 className="w-full h-full object-cover rounded-2xl transition duration-500 group-hover:blur-xs"
               />
               <div className="absolute inset-0 flex items-end p-2">

@@ -1,23 +1,12 @@
 'use client'
-
 import { useInView } from "react-intersection-observer";
-import dynamic from "next/dynamic";
-
-interface LazyDiscoverWrapperProps {
-  title: string;
-  autoRotate?: boolean;
+interface LazyComponentWrapperProps {
+  Component: React.ElementType;
+  componentProps: object;
   className?: string;
 }
 
-const Discover = dynamic(() => import("@/components/components/tabChooice/Discovers"), {
-  ssr: false,
-  loading: () => <div className="flex justify-center items-center h-[200px]">
-  <span className="loader"></span>
-</div>
-,
-});
-
-export default function LazyDiscoverWrapper({ title, autoRotate = false, className }: LazyDiscoverWrapperProps) {
+export default function LazyComponentWrapper({ Component, componentProps, className }: LazyComponentWrapperProps) {
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: true,
@@ -28,12 +17,13 @@ export default function LazyDiscoverWrapper({ title, autoRotate = false, classNa
   return (
     <div ref={ref}>
       {inView ? (
-        <>
-          <Discover title={title} autoRotate={autoRotate} className={className} />
-        </>
+        <Component {...componentProps} className={className} />
       ) : (
-        <span className="loader"></span>
+        <div className="flex justify-center items-center h-[200px]">
+          <span className="loader"></span>
+        </div>
       )}
     </div>
   );
 }
+

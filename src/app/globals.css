@@ -231,10 +231,10 @@
 
 
 
-/* Loading */
+/*Icon  Loading */
 .loader {
-    width: 48px;
-    height: 48px;
+    width: 27px;
+    height: 28px;
     border: 5px solid red;
     border-bottom-color: transparent;
     border-radius: 50%;
@@ -245,12 +245,12 @@
     }
 
     @keyframes rotation {
-    0% {
+      0% {
         transform: rotate(0deg);
-    }
-    100% {
+      }
+      100% {
         transform: rotate(360deg);
-    }
+      }
     } 
 
 
