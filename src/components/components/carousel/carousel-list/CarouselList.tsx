@@ -1,5 +1,5 @@
 'use client'
-import {useState, useEffect} from "react"
+import {useState, useEffect, memo} from "react"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi, } from "@/components/ui/carousel"
 import { cn } from '@/lib/utils';
 import CarouselIemBook from "../carousel-item/CarouselItem"
@@ -13,14 +13,16 @@ interface Props {
 }
 
 interface ItemData {
+  id: number
   title: string;
   description: string;
   image: string;
   price: number;
 }
 
-export function CarouselList({ title, data, className, timeAnimation = 2000, direction = "forward" }: Props) {
+const CarouselList = ({ title, data, className, timeAnimation = 2000, direction = "forward" }: Props) => {
 
+  
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -60,6 +62,7 @@ export function CarouselList({ title, data, className, timeAnimation = 2000, dir
           {data.map((item, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 hover-item">
               <CarouselIemBook className="z-1"
+                id={item.id}
                 title={item.title}
                 description={item.description}
                 image={item.image}
@@ -77,4 +80,6 @@ export function CarouselList({ title, data, className, timeAnimation = 2000, dir
     </div>
   );
 }
+
+export default memo(CarouselList)
 
