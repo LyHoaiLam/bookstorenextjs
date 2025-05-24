@@ -6,6 +6,7 @@ import IconCSharp from "@/assets/icons/logo/outlline/IconCSharp";
 import IconCss from "@/assets/icons/logo/outlline/IconCss";
 import IconDjango from "@/assets/icons/logo/outlline/IconDjango";
 import IconFigma from "@/assets/icons/logo/outlline/IconFigma";
+import IconGit from "@/assets/icons/logo/outlline/IconGit";
 import IconGithub from "@/assets/icons/logo/outlline/IconGithub";
 import IconGitlab from "@/assets/icons/logo/outlline/IconGitlab";
 import IconHTML from "@/assets/icons/logo/outlline/IconHTML";
@@ -14,6 +15,7 @@ import IconJavaScript from "@/assets/icons/logo/outlline/IconJavaScript";
 import IconMaterial from "@/assets/icons/logo/outlline/IconMaterial";
 import IconNetCore from "@/assets/icons/logo/outlline/IconNetCore";
 import IconNextJS from "@/assets/icons/logo/outlline/IconNextJS";
+import IconNgrok from "@/assets/icons/logo/outlline/IconNgrok";
 import IconNpm from "@/assets/icons/logo/outlline/IconNpm";
 import IconPhotoshop from "@/assets/icons/logo/outlline/IconPhotoshop";
 import IconPostman from "@/assets/icons/logo/outlline/IconPostman";
@@ -29,6 +31,7 @@ import IconTailwindCss from "@/assets/icons/logo/outlline/IconTailwindCss";
 import IconTomcat from "@/assets/icons/logo/outlline/IconTomcat";
 import IconTypeScript from "@/assets/icons/logo/outlline/IconTypeScript";
 import IconVueJS from "@/assets/icons/logo/outlline/IconVueJS";
+import IconXampp from "@/assets/icons/logo/outlline/IconXampp";
 import IconYarn from "@/assets/icons/logo/outlline/IconYarn";
 import IconZod from "@/assets/icons/logo/outlline/IconZod";
 import IconFacebook from "@/assets/icons/logo/outlline/Social/IconFacebook";
@@ -105,6 +108,9 @@ export default function Page() {
                 <IconFigma />
                 <IconRedux />
                 <IconZod />
+                <IconXampp />
+                <IconNgrok />
+                <IconGit />
                 <p>Office 365</p>
                 <p>zustand</p>
                 <p>react-hook-form</p>

@@ -3,14 +3,25 @@ import { SVGProps } from 'react';
 
 const IconBitbucket = (props: SVGProps<SVGSVGElement>) => (
    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="100px"
-        height="100px"
-        viewBox="0 0 1024 1024"
-        {...props}
-    >
-   <circle cx="512" cy="512" r="512" style={{fill: "#0052cc" }} />
-   <path d="M272.6 281.9c-9-.1-16.5 7.1-16.6 16.2 0 1 0 1.9.2 2.9l69.6 422.6c1.8 10.6 11 18.5 21.8 18.6h334c8.1.1 15.1-5.8 16.4-13.8L767.8 301c1.5-8.9-4.6-17.3-13.5-18.8-1-.2-1.9-.2-2.8-.2l-478.9-.1zm293.2 305.4H459.1l-28.8-150.7h161.3l-25.8 150.7z" style= {{ fill: "#fff" }} />
-</svg>
+      xmlns="http://www.w3.org/2000/svg"
+      width="100"
+      height="100"
+      viewBox="0 0 256 231"
+      {...props}
+   >
+      <defs>
+         <linearGradient id="logosBitbucket0" x1="108.633%" x2="46.927%" y1="13.818%" y2="78.776%">
+            <stop offset="18%" stopColor="#0052CC" />
+            <stop offset="100%" stopColor="#2684FF" />
+         </linearGradient>
+      </defs>
+      <g fill="none">
+         <path d="M101.272 152.561h53.449l12.901-75.319H87.06z" />
+         <path fill="#2684FF" d="M8.308 0A8.202 8.202 0 0 0 .106 9.516l34.819 211.373a11.155 11.155 0 0 0 10.909 9.31h167.04a8.202 8.202 0 0 0 8.201-6.89l34.82-213.752a8.202 8.202 0 0 0-8.203-9.514zm146.616 152.768h-53.315l-14.436-75.42h80.67z " />
+         <path fill="url(#logosBitbucket0)" d="M244.61 77.242h-76.916l-12.909 75.36h-53.272l-62.902 74.663a11.105 11.105 0 0 0 7.171 2.704H212.73a8.196 8.196 0 0 0 8.196-6.884z" />
+      </g>
+   </svg>
 )
 export default React.memo(IconBitbucket)
+
+{/* <svg xmlns="http://www.w3.org/2000/svg" width="256" height="231" viewBox="0 0 256 231" {...props}><defs><linearGradient id="logosBitbucket0" x1="108.633%" x2="46.927%" y1="13.818%" y2="78.776%"><stop offset="18%" stopColor="#0052CC"></stop><stop offset="100%" stopColor="#2684FF"></stop></linearGradient></defs><g fill="none"><path d="M101.272 152.561h53.449l12.901-75.319H87.06z"></path><path fill="#2684FF" d="M8.308 0A8.202 8.202 0 0 0 .106 9.516l34.819 211.373a11.155 11.155 0 0 0 10.909 9.31h167.04a8.202 8.202 0 0 0 8.201-6.89l34.82-213.752a8.202 8.202 0 0 0-8.203-9.514zm146.616 152.768h-53.315l-14.436-75.42h80.67z"></path><path fill="url(#logosBitbucket0)" d="M244.61 77.242h-76.916l-12.909 75.36h-53.272l-62.902 74.663a11.105 11.105 0 0 0 7.171 2.704H212.73a8.196 8.196 0 0 0 8.196-6.884z"></path></g></svg> */}
