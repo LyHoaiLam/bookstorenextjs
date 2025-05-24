@@ -19,5 +19,4 @@ const IconAngularJS = (props: SVGProps<SVGSVGElement>) => (
     <use href="#a" fill="#dd0031" transform="matrix(-1,0,0,1,512,0)" />
   </svg>
 )
-
 export default React.memo(IconAngularJS)

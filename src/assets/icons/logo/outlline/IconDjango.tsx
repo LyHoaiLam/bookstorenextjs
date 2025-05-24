@@ -15,6 +15,4 @@ const IconDjango = (props: SVGProps<SVGSVGElement>) => (
     </svg>
 
 )
-
-
 export default React.memo(IconDjango)

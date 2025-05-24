@@ -28,6 +28,5 @@ const IconPython = (props: SVGProps<SVGSVGElement>) => (
     />
     <circle fill="#ffffff" cx="308" cy="402" r="17" />
   </svg>
-);
-
-export default React.memo(IconPython);
+)
+export default React.memo(IconPython)

@@ -2,34 +2,24 @@ import * as React from 'react';
 import { SVGProps } from 'react';
 
 const IconBootStrap = (props: SVGProps<SVGSVGElement>) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 128 128"
-        width="100px"
-        height="100px"
-        {...props}
-    >
-        <defs>
-            <linearGradient id="a" x1="76.079" x2="523.48" y1="10.798" y2="365.95" gradientTransform="translate(1.11 14.613) scale(.24566)" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#9013fe" />
-                <stop offset="1" stop-color="#6610f2" />
-            </linearGradient>
-            <linearGradient id="b" x1="193.51" x2="293.51" y1="109.74" y2="278.87" gradientTransform="translate(0 52)" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#fff" />
-                <stop offset="1" stop-color="#f1e5fc" />
-            </linearGradient>
-            <filter id="c" width="197" height="249" x="161.9" y="135.46" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                    <feOffset dy="4" />
-                    <feGaussianBlur stdDeviation="8" />
-                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
-                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow" />
-                <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-            </filter>
-        </defs>
-            <path fill="url(#a)" d="M14.985 27.712c-.237-6.815 5.072-13.099 12.249-13.099h73.54c7.177 0 12.486 6.284 12.249 13.099-.228 6.546.068 15.026 2.202 21.94 2.141 6.936 5.751 11.319 11.664 11.883v6.387c-5.913.564-9.523 4.947-11.664 11.883-2.134 6.914-2.43 15.394-2.202 21.94.237 6.815-5.072 13.098-12.249 13.098h-73.54c-7.177 0-12.486-6.284-12.249-13.098.228-6.546-.068-15.026-2.203-21.94-2.14-6.935-5.76-11.319-11.673-11.883v-6.387c5.913-.563 9.533-4.947 11.673-11.883 2.135-6.914 2.43-15.394 2.203-21.94z"/><path fill="url(#b)" d="M267.1 364.46c47.297 0 75.798-23.158 75.798-61.355 0-28.873-20.336-49.776-50.532-53.085v-1.203c22.185-3.609 39.594-24.211 39.594-47.219 0-32.783-25.882-54.138-65.322-54.138h-88.74v217zm-54.692-189.48h45.911c24.958 0 39.131 11.128 39.131 31.279 0 21.505-16.484 33.535-46.372 33.535h-38.67zm0 161.96v-71.431h45.602c32.661 0 49.608 12.03 49.608 35.49 0 23.459-16.484 35.941-47.605 35.941z" filter="url(#c)" transform="translate(1.494 2.203) scale(.24566)" />
-    </svg>
-
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 128 128"
+    width="100"
+    height="100"
+    {...props}
+  >
+    <defs>
+      <linearGradient id="gradientPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#9013fe" />
+        <stop offset="100%" stopColor="#6610f2" />
+      </linearGradient>
+    </defs>
+    <rect width="128" height="128" rx="20" fill="url(#gradientPurple)" />
+    <path
+      fill="#fff"
+      d="M85.2 66.6c3.9-2.1 6.5-5.9 6.5-11.3 0-9.4-7.5-14.9-19.9-14.9H41v52h33.1c13.4 0 21.3-6.6 21.3-17.5 0-6.5-3.3-11.1-10.2-13.3zM52.6 49.7h16.5c5.8 0 9.2 2.5 9.2 7.1 0 5-3.6 7.5-9.8 7.5H52.6V49.7zm16.6 32.6H52.6V67.6h16.9c7 0 10.8 2.6 10.8 7.4 0 5.2-3.6 7.3-10.8 7.3z"
+    />
+  </svg>
 )
 export default React.memo(IconBootStrap)
