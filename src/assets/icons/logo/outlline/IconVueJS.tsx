@@ -2,17 +2,12 @@ import * as React from 'react';
 import { SVGProps } from 'react';
 
 const IconVueJS = (props: SVGProps<SVGSVGElement>) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="100"
-        height="100"
-        viewBox="0 0 256 221"
-        {...props}
-    >
-        <path fill="#41B883" d="M204.8 0H256L128 220.8L0 0h97.92L128 51.2L157.44 0z" />
-        <path fill="#41B883" d="m0 0l128 220.8L256 0h-51.2L128 132.48L50.56 0z" />
-        <path fill="#35495E" d="M50.56 0L128 133.12L204.8 0h-47.36L128 51.2L97.92 0z" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 256 256" {...props}>
+        <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"/>
+        <path fill="#41B883" d="M182 50h36l-90 155.25L38 50h68.85L128 86l20.7-36z" />
+        <path fill="#41B883" d="m38 50l90 155.25L218 50h-36l-54 93.15L73.55 50z" />
+        <path fill="#fff" d="M73.55 50L128 143.6L182 50h-33.3L128 86l-21.15-36z" />
+    </g>
     </svg>
 )
 export default React.memo(IconVueJS)
-{/* <svg xmlns="http://www.w3.org/2000/svg" width="256" height="221" viewBox="0 0 256 221" {...props}><path fill="#41B883" d="M204.8 0H256L128 220.8L0 0h97.92L128 51.2L157.44 0z"></path><path fill="#41B883" d="m0 0l128 220.8L256 0h-51.2L128 132.48L50.56 0z"></path><path fill="#35495E" d="M50.56 0L128 133.12L204.8 0h-47.36L128 51.2L97.92 0z"></path></svg> */}

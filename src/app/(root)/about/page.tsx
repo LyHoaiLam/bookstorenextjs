@@ -38,28 +38,29 @@ import IconFacebook from "@/assets/icons/logo/outlline/Social/IconFacebook";
 import IconLinkedin from "@/assets/icons/logo/outlline/Social/IconLinkedin";
 import IconTiktok from "@/assets/icons/logo/outlline/Social/IconTiktok";
 import SpinningLinkedinCard from "@/components/components/common/Animations/SpinningLinkedinCard";
+import AppContainer from "@/components/layouts/Container";
 
 export default function Page() {
     return (
-        <>
+        <AppContainer>
         <div>About Travel LHL Tính năng đang trong giai đoạn phát triển</div>
         <video src="videos/video.mp4" controls preload="metadata"
             style={{width: '100%',  maxWidth: '720px', maxHeight: '720px', borderRadius: '12px ', boxShadow: '0 4px 12px rgba(0,0,0,0.3)'}}
         >
         </video>
 
-        <div className="flex justify-center gap-12">
-            <div>
+        <div className="flex justify-center gap-12 flex-wrap">
+            <div className="flex flex-col gap-4">
                 <h1>Framework</h1>
-                    <IconAngularJS />
-                    <IconVueJS />
                     <IconReactJS />
                     <IconNextJS />
-                    <IconDjango />
+                    <IconAngularJS />
+                    <IconVueJS />
                     <IconNetCore />
+                    <IconDjango />
             </div>
 
-            <div>
+            <div className="flex flex-col gap-4">
                 <h1>Language Programming</h1>
                 <IconJavaScript />
                 <IconTypeScript />
@@ -71,46 +72,46 @@ export default function Page() {
                 <IconCss />
             </div>
 
-             <div>
+            <div className="flex flex-col gap-4">
                 <h1>Source management</h1>
+                <IconGit />
                 <IconGithub />
                 <IconGitlab />
                 <IconBitbuckit />
             </div>
 
-            <div>
+            <div className="flex flex-col gap-4">
                 <h1>Libary UI</h1>
-                <IconBootStrap />
-                <IconAntDesign />
+                <IconTailwindCss />
+                <IconScss />
                 <IconMaterial />
+                <IconAntDesign />
                 <IconShadcn />
                 <IconReactBootStrap />
-                <IconScss />
-                <IconTailwindCss />
+                <IconBootStrap />
             </div>
 
-            <div>
+            <div className="flex flex-col gap-4">
                 <h1>Test API</h1>
-                <IconSwagger />
                 <IconPostman />
+                <IconSwagger />
             </div>
         
-            <div>
+            <div className="flex flex-col gap-4">
                 <h1>Orther</h1>
-                <p>Object-Oriented Programming (OOP) thinking</p>
-                <p>Data Structures & Algorithms</p>
-                <p>Design Pattern</p>
-                <p>Java Server Page</p>
-                <IconTomcat />
                 <IconNpm />
                 <IconYarn />
                 <IconPhotoshop />
                 <IconFigma />
                 <IconRedux />
-                <IconZod />
                 <IconXampp />
+                <IconZod />
+                <IconTomcat />
                 <IconNgrok />
-                <IconGit />
+                <p>Object-Oriented Programming (OOP) thinking</p>
+                <p>Data Structures & Algorithms</p>
+                <p>Design Pattern</p>
+                <p>Java Server Page</p>
                 <p>Office 365</p>
                 <p>zustand</p>
                 <p>react-hook-form</p>
@@ -122,30 +123,28 @@ export default function Page() {
             </div>
 
 
-            <div>
+            <div className="">
                 <h1>My Information</h1>
                 <SpinningLinkedinCard
                     title="Facebook"
+                    image="/images/avatar/avaterFacebook.jpg"
                     link="https://www.facebook.com/hoai.lam.754656/"
                     component={<IconFacebook />}
                 />
                 <SpinningLinkedinCard
                     title="LinkedIn"
+                    image="/images/avatar/avatarTiktok.jpg"
                     link="https://www.linkedin.com/in/l%C3%A2m-ho%C3%A0i-70326b309/"
                     component={<IconTiktok />}
-                />
+                    />
                 <SpinningLinkedinCard
                     title="Tiktok"
+                    image="/images/avatar/avaterLinkedin.jpg"
                     link="https://www.tiktok.com/@hoailam03999"
                     component={<IconLinkedin />}
                 />
             </div>
         </div>
-
-d
-
-
-
-        </>
+        </AppContainer>
     )
 }

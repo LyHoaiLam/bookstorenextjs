@@ -2,26 +2,23 @@ import * as React from 'react';
 import { SVGProps } from 'react';
 
 const IconBitbucket = (props: SVGProps<SVGSVGElement>) => (
-   <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="100"
-      height="100"
-      viewBox="0 0 256 231"
-      {...props}
-   >
-      <defs>
-         <linearGradient id="logosBitbucket0" x1="108.633%" x2="46.927%" y1="13.818%" y2="78.776%">
-            <stop offset="18%" stopColor="#0052CC" />
-            <stop offset="100%" stopColor="#2684FF" />
-         </linearGradient>
-      </defs>
+   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 256 256" {...props}>
       <g fill="none">
-         <path d="M101.272 152.561h53.449l12.901-75.319H87.06z" />
-         <path fill="#2684FF" d="M8.308 0A8.202 8.202 0 0 0 .106 9.516l34.819 211.373a11.155 11.155 0 0 0 10.909 9.31h167.04a8.202 8.202 0 0 0 8.201-6.89l34.82-213.752a8.202 8.202 0 0 0-8.203-9.514zm146.616 152.768h-53.315l-14.436-75.42h80.67z " />
-         <path fill="url(#logosBitbucket0)" d="M244.61 77.242h-76.916l-12.909 75.36h-53.272l-62.902 74.663a11.105 11.105 0 0 0 7.171 2.704H212.73a8.196 8.196 0 0 0 8.196-6.884z" />
+         <g clipPath="url(#skillIconsBitbucketDark1)">
+            <path fill="#242938" d="M196 0H60C26.863 0 0 26.863 0 60v136c0 33.137 26.863 60 60 60h136c33.137 0 60-26.863 60-60V60c0-33.137-26.863-60-60-60" />
+            <path fill="#2684FF" d="M46.292 52.03a5.655 5.655 0 0 0-2.357.48c-.74.328-1.4.81-1.93 1.415a5.43 5.43 0 0 0-1.14 2.082a5.365 5.365 0 0 0-.138 2.36l23.624 140.758a7.395 7.395 0 0 0 2.551 4.422a7.655 7.655 0 0 0 4.85 1.778h113.332a5.635 5.635 0 0 0 3.651-1.28a5.443 5.443 0 0 0 1.914-3.309l23.624-142.342a5.363 5.363 0 0 0-.138-2.36a5.426 5.426 0 0 0-1.141-2.081a5.557 5.557 0 0 0-1.929-1.414a5.656 5.656 0 0 0-2.358-.481zm99.475 101.731h-36.173L99.8 103.537h54.732z" />
+            <path fill="url(#skillIconsBitbucketDark0)" d="M206.616 103.467h-52.185l-8.758 50.184h-36.144l-42.677 49.72a7.62 7.62 0 0 0 4.865 1.801h113.27a5.628 5.628 0 0 0 3.648-1.279a5.433 5.433 0 0 0 1.912-3.306z" />
+         </g>
+         <defs>
+            <linearGradient id="skillIconsBitbucketDark0" x1="39228.9" x2="23538.7" y1="3347.5" y2="23660.6" gradientUnits="userSpaceOnUse">
+               <stop offset=".18" stopColor="#0052CC" />
+               <stop offset="1" stopColor="#2684FF" />
+            </linearGradient>
+            <clipPath id="skillIconsBitbucketDark1">
+               <path fill="#fff" d="M0 0h256v256H0z" />
+            </clipPath>
+         </defs>
       </g>
    </svg>
 )
 export default React.memo(IconBitbucket)
-
-{/* <svg xmlns="http://www.w3.org/2000/svg" width="256" height="231" viewBox="0 0 256 231" {...props}><defs><linearGradient id="logosBitbucket0" x1="108.633%" x2="46.927%" y1="13.818%" y2="78.776%"><stop offset="18%" stopColor="#0052CC"></stop><stop offset="100%" stopColor="#2684FF"></stop></linearGradient></defs><g fill="none"><path d="M101.272 152.561h53.449l12.901-75.319H87.06z"></path><path fill="#2684FF" d="M8.308 0A8.202 8.202 0 0 0 .106 9.516l34.819 211.373a11.155 11.155 0 0 0 10.909 9.31h167.04a8.202 8.202 0 0 0 8.201-6.89l34.82-213.752a8.202 8.202 0 0 0-8.203-9.514zm146.616 152.768h-53.315l-14.436-75.42h80.67z"></path><path fill="url(#logosBitbucket0)" d="M244.61 77.242h-76.916l-12.909 75.36h-53.272l-62.902 74.663a11.105 11.105 0 0 0 7.171 2.704H212.73a8.196 8.196 0 0 0 8.196-6.884z"></path></g></svg> */}

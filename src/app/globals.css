@@ -282,11 +282,11 @@
       font-size: 16px;
       font-weight: bold;
     }
-    .spin-front {
+    /* .spin-front {
       background-color: white;
       color: black;
       border: 1px solid black;
-    }
+    } */
     .spin-back {
       background-color: white;
       transform: rotateY(180deg);
